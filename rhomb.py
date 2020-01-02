@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 ########################################################################
 # 
-# Copyright (c) 2020 CIT, Shang Jiao Tong University. All Rights Reserved
+# Copyright (c) 2020 Nengjun Zhu. All Rights Reserved
+# Licensed under the MIT (the "LICENSE")
 # 
 ########################################################################
  
 """
 File: rhomb.py
 Author: Nengjun Zhu(zhu_nj@sjtu.edu.cn)
+Alliation: Shanghai Jiao Tong University
 Date: 2020/01/02 12:21:47
 """
 

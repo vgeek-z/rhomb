@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 ########################################################################
 # 
-# Copyright (c) 2020 CIT, Shanghai Jiao Tong University. All Rights Reserved
+# Copyright (c) 2020 Nengjun Zhu. All Rights Reserved
+# Licensed under the MIT (the "LICENSE")
 # 
 ########################################################################
  
 """
 File: example.py
 Author: Nengjun Zhu(zhu_nj@sjtu.edu.cn)
+Affiliation: Shanghai Jiao Tong University
 Date: 2020/01/02 12:23:53
 """
 
