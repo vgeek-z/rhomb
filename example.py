@@ -24,26 +24,26 @@ from rhomb import RuleMap
 
 print 'Creating  Rhombus ======================='
 age = Rhombus(name='age', cost=0.5)
-age.add_condition("x >= 50")
-age.add_condition("x < 50")
-age.print_conditions()
+age.add_branch("x >= 50")
+age.add_branch("x < 50")
+age.print_branches()
 print 
 
 sex = Rhombus(name='sex', cost=1)
-sex.add_condition("x == 'male'")
-sex.add_condition("x == 'female'")
-sex.add_condition("x == 'other'")
-sex.print_conditions()
+sex.add_branch("x == 'male'")
+sex.add_branch("x == 'female'")
+sex.add_branch("x == 'other'")
+sex.print_branches()
 print 
 
 weight = Rhombus(name='weight', cost=2)
-weight.add_condition("x > 65 and x < 80")
-weight.print_conditions()
+weight.add_branch("x > 65 and x < 80")
+weight.print_branches()
 print 
 
 edu = Rhombus(name='edu', cost=3)
-edu.add_condition("x in ['high', 'middle']")
-edu.print_conditions()
+edu.add_branch("x in ['high', 'middle']")
+edu.print_branches()
 print 
 
 #Creating Rules

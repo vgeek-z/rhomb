@@ -72,24 +72,24 @@ class Rhombus:
         '''
         self.name = name
         self.cost = cost
-        self.conditions = []
-    def add_condition(self, str_condtion):
+        self.branches = []
+    def add_branch(self, str_condtion):
         '''
         Input:
-            str_condition: "x >= 2"
+            str_branch: "x >= 2"
         '''
-        self.conditions.append(str_condtion)
-    def del_condition(self, idx):
-        del self.conditions[idx]
+        self.branches.append(str_condtion)
+    def del_branch(self, idx):
+        del self.branches[idx]
     def judge(self, x):
-        for i, c in enumerate(self.conditions):
+        for i, c in enumerate(self.branches):
             if eval(c):
                 return i
         return None
-    def print_conditions(self):
-        print 'name: ', self.name
+    def print_branches(self):
+        print 'rhombus_name: ', self.name
         print 'condition, branch_id'
-        for i, c in enumerate(self.conditions):
+        for i, c in enumerate(self.branches):
             print "{}, {}".format(c, i)
     def __call__(self, x):
         return self.judge(x)
@@ -120,7 +120,7 @@ class Rule:
             values = [values]
         return all([rh(values[i]) == bid for i, (rh, bid) in enumerate(self.rhombusList)])
     def print_rule(self):
-        print '{}: '.format(self.id) + ' | '.join(['(' + rh.name + ',' + str(bid)  + ')' + ': ' + rh.conditions[bid] \
+        print '{}: '.format(self.id) + ' | '.join(['(' + rh.name + ',' + str(bid)  + ')' + ': ' + rh.branches[bid] \
                            for (rh, bid) in self.rhombusList])
 
 class RuleMap:
@@ -141,7 +141,7 @@ class RuleMap:
     def __gen_rh_cond_map__(self):
         for rh in self.rhVoc.index2word.values():
             self.rh2cond[self.rhVoc.word2index[rh]] = []
-            for _ in xrange(len(rh.conditions)):
+            for _ in xrange(len(rh.branches)):
                 self.cond2rh[self.num_cond] = self.rhVoc.word2index[rh]
                 self.rh2cond[self.rhVoc.word2index[rh]].append(self.num_cond)
                 self.num_cond += 1
